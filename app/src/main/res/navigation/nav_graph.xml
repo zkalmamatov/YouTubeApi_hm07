@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playListFragment2">
+
+    <fragment
+        android:id="@+id/playListFragment2"
+        android:name="kg.less.youtubeapi_hm07.ui.fragment.play_list.PlayListFragment"
+        android:label="fragment_play_list"
+        tools:layout="@layout/fragment_play_list" >
+        <action
+            android:id="@+id/action_playListFragment2_to_videoFragment2"
+            app:destination="@id/videoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment2"
+        android:name="kg.less.youtubeapi_hm07.ui.fragment.player.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/videoFragment2"
+        android:name="kg.less.youtubeapi_hm07.ui.fragment.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment2_to_playerFragment2"
+            app:destination="@id/playerFragment2" />
+    </fragment>
+</navigation>
